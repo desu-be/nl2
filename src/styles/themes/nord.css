@@ -1,0 +1,16 @@
+/* Arctic blue-grey palette (Nord). */
+:root[data-theme='nord'] {
+  color-scheme: dark;
+  --bg: #2e3440;
+  --surface: #3b4252;
+  --surface-2: #434c5e;
+  --border: #4c566a;
+  --text: #e5e9f0;
+  --heading: #eceff4;
+  --muted: #a3adbf;
+  --accent: #88c0d0;
+  --backdrop: rgb(0 0 0 / 50%);
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 20%);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 28%), 0 1px 2px -1px rgb(0 0 0 / 28%);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 28%), 0 2px 4px -2px rgb(0 0 0 / 28%);
+}

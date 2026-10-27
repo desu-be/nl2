@@ -1,0 +1,26 @@
+/* Document defaults: box model, font, page colors. */
+* { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 var(--font);
+  font-feature-settings: 'cv11'; /* Inter: single-storey a */
+  letter-spacing: -0.006em;
+}
+
+h1, h2, h3 { color: var(--heading); line-height: 1.25; letter-spacing: -0.02em; }
+a { color: var(--accent); }
+
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--accent) 28%, transparent); }
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--muted) 40%, transparent) transparent; }

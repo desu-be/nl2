@@ -1,0 +1,16 @@
+/* Maximum legibility: pure black background, saturated accent, white text. */
+:root[data-theme='high-contrast'] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --surface-2: #1a1a1a;
+  --border: #8a8a8a;
+  --text: #ffffff;
+  --heading: #ffffff;
+  --muted: #d0d0d0;
+  --accent: #ffd700;
+  --backdrop: rgb(0 0 0 / 75%);
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow: none;
+}

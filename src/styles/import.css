@@ -1,0 +1,30 @@
+/* « Import » screen: validation report, preview of the pack, list of imported packs. */
+.import-result { margin: 16px 0; }
+
+.issues {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--grade-again);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.issues-warning { border-left-color: var(--grade-hard); }
+.issues-title { margin: 0 0 6px; color: var(--heading); font-weight: 600; }
+.issues ul { margin: 0; padding-left: 18px; }
+.issues li { margin: 4px 0; overflow-wrap: anywhere; }
+.issue-location { color: var(--muted); font-size: 13px; }
+
+.pack-preview {
+  padding: 4px 16px 12px;
+  margin-bottom: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.pack-preview .section-title { margin-top: 12px; }
+.pack-status { color: var(--accent); font-weight: 500; }
+
+.pack-list ul { margin: 0; padding: 0; list-style: none; }
+.pack-row { display: grid; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.pack-title { color: var(--heading); font-weight: 500; }

@@ -1,0 +1,8 @@
+/* Screen entrance (shadcn/ui timing). Everything stops when the system asks for reduced motion. */
+@keyframes fade-in { from { opacity: 0; transform: translateY(4px); } }
+
+#screen > * { animation: fade-in 150ms var(--ease-out); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

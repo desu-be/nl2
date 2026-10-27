@@ -1,0 +1,59 @@
+/* Quiz screen: a question card, then the actions. On a phone the actions stick to the bottom of the
+   screen, within reach of the thumb; on a desktop every action also has its key. */
+.quiz-header { display: flex; align-items: center; justify-content: space-between; margin: 8px 0; }
+.quiz-progress { margin: 0; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+
+.question-card {
+  padding: 24px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.question-prompt { margin: 0; color: var(--heading); font-size: 26px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.question-translation { margin: 4px 0 0; color: var(--muted); }
+.question-ask { margin: 12px 0 0; color: var(--accent); font-size: 14px; font-weight: 500; }
+
+.question-answer { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+.answer-text { margin: 0; color: var(--heading); font-size: 22px; font-weight: 600; overflow-wrap: anywhere; }
+.answer-example { margin-top: 12px; }
+.answer-example p { margin: 2px 0; }
+.example-fr, .answer-context, .answer-note { color: var(--muted); }
+.example-nl { font-style: italic; }
+.answer-context, .answer-note { margin: 8px 0 0; font-size: 14px; white-space: pre-line; text-align: left; }
+
+.quiz-actions {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+  background: var(--bg);
+}
+.quiz-actions-ask { grid-template-columns: 1fr 1fr; }
+.quiz-actions-ask .action-reveal { grid-column: 1 / -1; }
+.quiz-actions-grades { grid-template-columns: 1fr 1fr; }
+.quiz-action { min-height: 56px; }
+
+.action-reveal { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.action-reveal .key-hint { color: inherit; border-color: currentColor; }
+.action-again { border-left: 4px solid var(--grade-again); }
+.action-hard { border-left: 4px solid var(--grade-hard); }
+.action-good, .action-knewIt { border-left: 4px solid var(--grade-good); }
+.action-known { border-left: 4px solid var(--grade-known); }
+
+@media (min-width: 600px) {
+  .quiz-actions-ask { grid-template-columns: 2fr 1fr 1fr; }
+  .quiz-actions-ask .action-reveal { grid-column: auto; }
+  .quiz-actions-grades { grid-template-columns: repeat(4, 1fr); }
+  .question-card { padding: 40px 24px; }
+  .question-prompt { font-size: 32px; }
+}
+
+.summary { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); margin-bottom: 16px; }
+.counter-again { border-left: 4px solid var(--grade-again); }
+.counter-hard { border-left: 4px solid var(--grade-hard); }
+.counter-good { border-left: 4px solid var(--grade-good); }
+.counter-known { border-left: 4px solid var(--grade-known); }

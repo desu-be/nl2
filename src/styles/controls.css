@@ -1,0 +1,52 @@
+/* Shared controls, after shadcn/ui: outline buttons, large enough for a thumb on mobile. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--touch-h);
+  padding: 0 16px;
+  background: var(--surface);
+  color: var(--heading);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-xs);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--ease), border-color var(--ease);
+}
+.button:hover { background: linear-gradient(var(--hover), var(--hover)), var(--surface); }
+.button[aria-pressed='true'] { border-color: var(--accent); background: linear-gradient(var(--pressed), var(--pressed)), var(--surface); }
+.button:disabled { opacity: 0.5; cursor: default; }
+a.button { text-decoration: none; }
+
+.button-primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.button-primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--bg)); }
+.button-ghost { min-height: var(--control-h); border-color: transparent; background: none; box-shadow: none; color: var(--muted); }
+.button-wide { width: 100%; }
+
+.button-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.stack { display: grid; gap: 8px; }
+
+/* Keyboard hint on a button: only where a keyboard is likely (a fine pointer). */
+.key-hint {
+  min-width: 22px;
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font: 500 12px/1.4 var(--font);
+  text-align: center;
+}
+@media (pointer: coarse) { .key-hint { display: none; } }
+
+.badge {
+  min-width: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}

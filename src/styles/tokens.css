@@ -1,0 +1,27 @@
+/* Theme-independent tokens (shadcn/ui proportions). Colors are defined per theme in themes/*.css; the
+   mixes below only derive from those theme variables. */
+:root {
+  --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --control-h: 36px;
+  --touch-h: 48px;
+  --bar-h: 56px;
+  --gutter: 16px;
+  --content-w: 640px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease: 150ms var(--ease-out);
+
+  /* Grade colors, readable on light and dark themes alike. */
+  --grade-again: #ef4444;
+  --grade-hard: #f59e0b;
+  --grade-good: #22c55e;
+  --grade-known: #8b5cf6;
+
+  /* Interaction layers, laid over any surface. */
+  --hover: color-mix(in srgb, var(--text) 6%, transparent);
+  --pressed: color-mix(in srgb, var(--accent) 12%, transparent);
+  --focus-ring: color-mix(in srgb, var(--accent) 60%, transparent);
+}

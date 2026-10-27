@@ -1,0 +1,14 @@
+/* Settings screen: one section per topic; the synchronization form stacks its fields. */
+.settings-section { margin-bottom: 24px; }
+
+.sync-form { display: grid; gap: 12px; }
+.field { display: grid; gap: 4px; }
+.field-label { color: var(--heading); font-weight: 500; font-size: 14px; }
+.text-field:disabled { color: var(--muted); }
+
+.sync-repo { margin: 12px 0 0; color: var(--heading); font-weight: 500; overflow-wrap: anywhere; }
+.sync-summary { margin: 4px 0 12px; color: var(--muted); }
+
+/* Home: synchronization state under the title. */
+.sync-status { margin: -4px 0 8px; color: var(--muted); font-size: 13px; }
+.sync-status[data-error]:not([data-error='']) { color: var(--grade-again); }

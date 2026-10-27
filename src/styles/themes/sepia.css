@@ -1,0 +1,16 @@
+/* Warm paper tones for long sessions. */
+:root[data-theme='sepia'] {
+  color-scheme: light;
+  --bg: #f4ecd8;
+  --surface: #fbf5e6;
+  --surface-2: #efe4cc;
+  --border: #dccfb2;
+  --text: #433422;
+  --heading: #2e2416;
+  --muted: #7a6650;
+  --accent: #a0522d;
+  --backdrop: rgb(60 40 20 / 35%);
+  --shadow-xs: 0 1px 2px rgb(74 52 24 / 6%);
+  --shadow-sm: 0 1px 3px rgb(74 52 24 / 10%), 0 1px 2px -1px rgb(74 52 24 / 10%);
+  --shadow: 0 4px 6px -1px rgb(74 52 24 / 10%), 0 2px 4px -2px rgb(74 52 24 / 10%);
+}

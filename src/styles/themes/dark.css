@@ -1,0 +1,17 @@
+/* Dark theme, also the default when no theme is set: shadcn/ui "zinc" neutrals, blue accent. */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #09090b;
+  --surface: #0c0c0e;
+  --surface-2: #18181b;
+  --border: #27272a;
+  --text: #e4e4e7;
+  --heading: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #3b82f6;
+  --backdrop: rgb(0 0 0 / 60%);
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 30%);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 40%), 0 1px 2px -1px rgb(0 0 0 / 40%);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 40%), 0 2px 4px -2px rgb(0 0 0 / 40%);
+}

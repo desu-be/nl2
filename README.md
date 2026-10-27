@@ -2,7 +2,7 @@
 
 A personal Dutch vocabulary quiz for French speakers. You see a prompt, reveal the answer, then grade yourself.
 
-> **Status**: in preparation, no code yet.
+> **Status**: early version, in personal use.
 
 ## Features
 
@@ -11,4 +11,7 @@ A personal Dutch vocabulary quiz for French speakers. You see a prompt, reveal t
 - Grading: *Didn't know*, *Partly*, *Knew it*, *Known for good* (reversible).
 - Keyboard-driven on desktop, thumb-friendly on mobile.
 - Content imported as JSON packs.
+- Progress kept in the browser, and synchronized between devices through a private GitHub repository.
+- Keeps working when the network drops: answers wait and are sent later.
+- Full JSON export of packs and progress.
 - Installable as a progressive web app.

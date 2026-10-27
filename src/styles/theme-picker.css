@@ -1,0 +1,25 @@
+/* Theme picker of the settings screen: one large button per theme, with a swatch of its colors. */
+.theme-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.theme-picker legend { margin-bottom: 8px; padding: 0; color: var(--heading); font-weight: 600; }
+.theme-picker .button { justify-content: flex-start; text-align: left; }
+
+/* The swatch renders a theme's own colors, whatever theme is active. */
+.theme-swatch {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+.theme-swatch[data-swatch='dark'] { background: linear-gradient(135deg, #09090b 50%, #3b82f6 50%); }
+.theme-swatch[data-swatch='light'] { background: linear-gradient(135deg, #fafafa 50%, #2563eb 50%); }
+.theme-swatch[data-swatch='sepia'] { background: linear-gradient(135deg, #f4ecd8 50%, #a0522d 50%); }
+.theme-swatch[data-swatch='nord'] { background: linear-gradient(135deg, #2e3440 50%, #88c0d0 50%); }
+.theme-swatch[data-swatch='high-contrast'] { background: linear-gradient(135deg, #000000 50%, #ffd700 50%); }

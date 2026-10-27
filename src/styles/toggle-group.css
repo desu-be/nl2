@@ -1,0 +1,25 @@
+/* Rows of toggle buttons (quiz settings): wrap on a phone, every toggle large enough for a thumb. */
+.toggle-group { margin: 0 0 16px; padding: 0; border: 0; }
+.toggle-group legend { margin-bottom: 6px; padding: 0; color: var(--heading); font-weight: 600; font-size: 14px; }
+
+.toggle-row { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.toggle {
+  min-height: 40px;
+  padding: 0 14px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color var(--ease), border-color var(--ease);
+}
+.toggle:hover { background: linear-gradient(var(--hover), var(--hover)), var(--surface); }
+.toggle[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: linear-gradient(var(--pressed), var(--pressed)), var(--surface);
+  color: var(--heading);
+  font-weight: 500;
+}

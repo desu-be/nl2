@@ -1,0 +1,26 @@
+/* Home screen: counters, quick starts, custom quiz form. Counters are reused by the quiz summary. */
+.counters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 8px 0 0;
+}
+.counter {
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.counter dt { color: var(--muted); font-size: 13px; }
+.counter dd { margin: 2px 0 0; color: var(--heading); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.quick-starts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.quick-start { flex-direction: column; gap: 4px; padding: 8px; }
+
+.quiz-form { margin-bottom: 16px; }
+.matching { margin-top: -4px; }
+
+@media (max-width: 380px) {
+  .counter { padding: 10px 8px; }
+  .counter dd { font-size: 20px; }
+}

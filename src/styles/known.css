@@ -1,0 +1,13 @@
+/* « Connus » screen: a filterable list, one row per item with its reactivation button. */
+.known-list { margin: 12px 0 0; padding: 0; list-style: none; }
+.known-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.known-text { display: grid; flex: 1; min-width: 0; }
+.known-nl { color: var(--heading); font-weight: 500; overflow-wrap: anywhere; }
+.known-fr { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.known-empty { padding: 16px 0; color: var(--muted); }
