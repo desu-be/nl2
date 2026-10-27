@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.local
+.env*
+# Data exports and dumps never belong in this repository
+*.sql
+*.sql.gz
+export/
+nl2-export*.json
